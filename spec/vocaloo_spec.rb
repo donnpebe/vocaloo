@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe String do
+describe Vocaloo do
   let(:plain_string) { "GOal!" }
   let(:hyperbolize_string) { "GOOOaaal!" }
   let(:a4_hyperbolize_string) { "GOOOOaaaal!" }
