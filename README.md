@@ -1,6 +1,6 @@
 # Vocaloo
 
-[![Build Status](https://travis-ci.org/donnpebe/vocaloo.png?branch=master)](https://travis-ci.org/donnpebe/vocaloo) [![Gem Version](https://badge.fury.io/rb/vocaloo.png)](http://badge.fury.io/rb/vocaloo) [![Coverage Status](https://coveralls.io/repos/donnpebe/vocaloo/badge.png)](https://coveralls.io/r/donnpebe/vocaloo)
+[![Build Status](https://travis-ci.org/donnpebe/vocaloo.png?branch=master)](https://travis-ci.org/donnpebe/vocaloo) [![Gem Version](https://badge.fury.io/rb/vocaloo.png)](http://badge.fury.io/rb/vocaloo) [![Coverage Status](https://coveralls.io/repos/donnpebe/vocaloo/badge.png)](https://coveralls.io/r/donnpebe/vocaloo) [![Code Climate](https://codeclimate.com/github/donnpebe/vocaloo.png)](https://codeclimate.com/github/donnpebe/vocaloo)
 
 Make string more expresive and fun
 
