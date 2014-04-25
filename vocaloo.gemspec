@@ -8,8 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Vocaloo::VERSION
   spec.authors       = ["Donn Pebe"]
   spec.email         = ["thedonnpe@gmail.com"]
-  spec.description   = "Modifying vowels like crazy"
-  spec.summary       = "Modifying vowels like crazy"
+  spec.description   = "Make string more expresive and fun"
+  spec.summary       = %q{Extends ruby "String" class with some silly methods to
+  make string more expresive and fun}
   spec.homepage      = "https://github.com/donnpebe/vocaloo"
   spec.license       = "MIT"
 

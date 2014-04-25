@@ -1,6 +1,6 @@
 # Vocaloo
 
-Modifying vowels like crazy
+Make string more expresive and fun
 
 ## Installation
 
@@ -18,7 +18,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```rb
+require 'vocaloo'
+
+"Goal!".hyperbolize # => Goooaaal!
+"Goal!".hyperbolize(length: 4) # => Gooooaaaal!
+"Help me".dramatize # => Help me!!!
+"Help me".dramatize(length: 4) # => Help me!!!!
+"Google".stringosaur # => Goowrglewr
+"Please".hyperbolize.dramatize # => Pleeeaaaseee!!!
+
+Vocaloo.hyperbolize("What") # => Whaaat
+Vocaloo.dramatize("What") # => What!!!
+Vocaloo.stringosaur("What") # => Whawrt
+```
 
 ## Contributing
 
