@@ -1,6 +1,28 @@
 require "vocaloo/version"
 
 module Vocaloo
+  class Saurus
+    def transform(str)
+      new_chunk = []
+      stash = []
+      str.split('').each do |a|
+        if Vocaloo.vowels.include? a.downcase 
+          stash << a; next
+        elsif !stash.empty?
+            new_chunk << vowels_transform(stash); stash=[]
+        end
+        new_chunk << a
+      end
+      new_chunk.tap { |n| n << vowels_transform(stash) unless stash.empty? }
+               .join
+    end
+
+    private
+      def vowels_transform(vowels)
+        "#{vowels.join}#{(vowels.last.upcase?) ? "wr".upcase : "wr"}"
+      end
+  end
+
   module InstanceMethods
     def hyperbolize(opts={})
       Vocaloo.hyperbolize(self, opts)
@@ -46,27 +68,7 @@ module Vocaloo
   end
 
   def self.stringosaur(str)
-    new_chunk = []
-    find_vocal = []
-    str.split('').each do |a|
-      if vowels.include? a.downcase 
-        find_vocal << a
-      else
-        if find_vocal.empty?
-          new_chunk << a
-        else
-          patch = (find_vocal.last.upcase?) ? "wr".upcase : "wr"
-          new_chunk << "#{find_vocal.join}#{patch}#{a}"
-          find_vocal = []
-        end
-      end
-    end
-    unless find_vocal.empty?
-      patch = (find_vocal.last.upcase?) ? "wr".upcase : "wr"
-      new_chunk << "#{find_vocal.join}#{patch}"
-    end
-
-    new_chunk.join
+    Saurus.new.transform(str)
   end
 end
 
